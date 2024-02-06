@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <form id="myform">
+        <p><input type="button" value="press me" onclick="getinfo()"></p>
+    </form>
+    <script>
+        const getinfo = () => {
+            $.ajax({
+                type: "post",
+                url: "echo.php"
+            }).done((result) => {
+                $("#divInfo").html(result);
+            });
+        }
+    </script>
+    <div id="divInfo"></div>
+</body>
+</html>
