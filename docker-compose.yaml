@@ -1,18 +1,18 @@
 version: "3.8"
 services:
   php:
-    build: './src/php'
+    build: 'docker/php'
     volumes:
-      - ./src/www/:/var/www/html/
+      - ./src/:/var/www/html/
 
   apache:
-    build: './src/apache'
+    build: 'docker/apache'
     depends_on:
       - php
     ports:
       - "80:80"
     volumes:
-      - ./src/www/:/var/www/html/
+      - ./src/:/var/www/html/
 
   mariadb:
     image: mariadb:10.11
