@@ -70,6 +70,8 @@ sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/dock
 sudo dnf install docker-ce docker-ce-cli containerd.io
 sudo systemctl enable docker --now
 sudo usermod -aG docker ${USER}
+sudo groupadd docker && sudo gpasswd -a ${USER} docker && sudo systemctl restart docker
+sudo newgrp docker
 # verify that Docker was correctly installed and is running by running the Docker hello-world image
 # sudo docker run hello-world
 docker run hello-world
