@@ -93,5 +93,5 @@ if (!$connect) {
     die('Could not connect: ' . mysql_error());
 }
 # your code ...
-close(connect);
+mysqli_close($connect);
 ```
