@@ -1,4 +1,7 @@
 # LAMP docker
+```bash
+sudo chmod -R 755 src/
+```
 ## build container
 ```bash
 make build
