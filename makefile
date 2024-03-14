@@ -1,5 +1,5 @@
 build:
-	sudo chmod -R 755 src/
+	# sudo chmod -R 755 src/
 	docker-compose up -d
 
 start:
