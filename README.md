@@ -56,7 +56,18 @@ sudo systemctl enable docker
 sudo systemctl enable docker --now
 sudo usermod -aG docker ${USER}
 ```
-
+Fedora or RHEL
+```bash
+sudo dnf upgrade
+sudo dnf install dnf-plugins-core
+sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install docker-ce docker-ce-cli containerd.io
+sudo systemctl enable docker --now
+sudo usermod -aG docker ${USER}
+# verify that Docker was correctly installed and is running by running the Docker hello-world image
+# sudo docker run hello-world
+docker run hello-world
+```
 # Example
 Connect to the database you created
 ```php
@@ -73,6 +84,6 @@ $connect = mysqli_connect(
 if (!$connect) {
     die('Could not connect: ' . mysql_error());
 }
-
+# your code ...
 close(connect);
 ```
