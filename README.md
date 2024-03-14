@@ -5,14 +5,20 @@ sudo chmod -R 755 src/
 ## build container
 ```bash
 make build
+# or
+docker compose up -d  # for Ubuntu and other GNU/Linux
 ```
 ## start
 ```bash
 make start
+# or
+docker compose start # for Ubuntu and other GNU/Linux
 ```
 ## stop
 ```bash
 make stop
+# or
+docker compose stop # for Ubuntu and other GNU/Linux
 ```
 # URL for working with this project
 ## PhpMyAdmin
